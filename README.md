@@ -14,7 +14,7 @@ deno install
 deno task dev
 ```
 
-- To create a note make a POST request to `http://localhost:8080/create-note` with the following req body:
+- To create a note make a POST request to `http://localhost:8000/create-note` with the following req body:
 
 ```
 {
@@ -23,6 +23,6 @@ deno task dev
 }
 ```
 
-- To get all notes make a GET request to `http://localhost:8080/notes`
+- To get all notes make a GET request to `http://localhost:8000/notes`
 
-- To get a single note make a GET request to `http://localhost:8080/notes/:id`
+- To get a single note make a GET request to `http://localhost:8000/notes/:id`
