@@ -5,7 +5,7 @@ const app = new Hono();
 interface Note {
   id?: string;
   title: string;
-  description: string;
+  content: string;
 }
 function validateNote(note: any): note is Note {
   return (
@@ -58,7 +58,6 @@ app.post("/create-note", async (c: Context) => {
     note.id = crypto.randomUUID();
     await saveToFile(note);
 
-    console.log({ message: "Note saved successfully", note }, 201);
     return c.json({ message: "Note created successfully", note }, 201);
   } catch (error) {
     console.error("Error creating note:", error);
